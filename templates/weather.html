@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather for {{ city }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='./Results.css') }}">
+    <style>
+        /* Additional inline styles can be added here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather for {{ city }}</h1>
+        <div class="weather-info">
+            <div class="temperature">
+                <p>Temperature:</p>
+                <p>{{ temperature }}°F</p>
+            </div>
+            <div class="description">
+                <p>Description:</p>
+                <p>{{ description }}</p>
+            </div>
+            <div class="humidity">
+                <p>Humidity:</p>
+                <p>{{ humidity }}%</p>
+            </div>
+            <div class="additional-info">
+                <!-- Add more weather information here -->
+                <div class="wind">
+                    <p>Wind:</p>
+                    <p>{{ wind_speed }} mph</p>
+                </div>
+                <div class="pressure">
+                    <p>Pressure:</p>
+                    <p>{{ pressure }} hPa</p>
+                </div>
+            </div>
+        </div>
+        <a href="/" class="btn">Back to Homepage</a>
+    </div>
+    <script>
+        // You can add JavaScript code here for interactivity
+    </script>
+</body>
+</html>

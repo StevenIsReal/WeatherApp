@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='./HomePage.css') }}">
+    <!-- <script src="./script.js"></script> -->
+</head>
+<body>
+    <div class="card">
+        <h1 class="heading">Weather App</h1>
+			<form method="POST" action="/weather" class="weather-form">
+				<label for="city" class="input-label">Enter a city:</label>
+				<input type="text" id="city" name="city" class="input-field" required>
+				<button type="submit" class="btn">Get Weather</button>
+			</form>
+        <p class="description">Find out the current weather conditions in your city.</p>
+    </div>
+</body>
+</html>
